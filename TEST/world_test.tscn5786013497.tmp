@@ -10,3 +10,4 @@
 [node name="GameUI" parent="CanvasLayer" instance=ExtResource("1_qreue")]
 
 [node name="player_base" parent="." instance=ExtResource("2_niss3")]
+entity_class = 1

@@ -23,12 +23,8 @@ func gain_exp(amount: float) -> void:
 		calculate_needed_exp()
 	else:
 		current_exp = new_exp
-		
 	SignalManager.update_ui_exp.emit(current_exp, needed_exp)
 		
-func _refresh_exp() -> void:
-	pass
-
 func calculate_needed_exp() -> void:
 	var exp_need_by_curve: float = _exp_curve.sample(_player.level)
 	needed_exp = exp_need_by_curve

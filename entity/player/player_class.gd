@@ -8,7 +8,8 @@ func _ready() -> void:
 	player_id = multiplayer.get_unique_id()
 	GameManager.players[player_id] = self
 	level_manager.setup_exp()
-
+	
+	super()
 
 func _process(_delta: float) -> void:
 	

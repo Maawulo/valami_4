@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StatManager" load_steps=2 format=3 uid="uid://bls8830v1ovwj"]
+
+[ext_resource type="Script" uid="uid://b2k6ixvgw6se1" path="res://systems/stats/stat_manager.gd" id="1_034i2"]
+
+[resource]
+script = ExtResource("1_034i2")
+base_stamina = 3.0
+base_intellect = 6.0
+base_strength = 1.0
+base_dexterity = 2.0
+metadata/_custom_type_script = "uid://b2k6ixvgw6se1"
