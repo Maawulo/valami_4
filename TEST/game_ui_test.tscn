@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://csb1i75b3rh3l"]
+
+[ext_resource type="Script" uid="uid://diuqsqrthd8md" path="res://TEST/test_ui.gd" id="1_c1knm"]
+[ext_resource type="Texture2D" uid="uid://d2ae74f07qmrg" path="res://user_interface/sprites/UI_Bars.png" id="2_tughe"]
+[ext_resource type="FontFile" uid="uid://cyew6rr1ks77w" path="res://user_interface/font/Prototype.ttf" id="3_tughe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amhku"]
+atlas = ExtResource("2_tughe")
+region = Rect2(115, 106, 28, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufy4d"]
+atlas = ExtResource("2_tughe")
+region = Rect2(34, 11, 28, 3)
+
+[sub_resource type="LabelSettings" id="LabelSettings_amhku"]
+line_spacing = 0.0
+font = ExtResource("3_tughe")
+font_size = 9
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="GameUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c1knm")
+
+[node name="XPBar" type="TextureProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -9.0
+grow_horizontal = 2
+grow_vertical = 0
+step = 0.1
+value = 72.0
+nine_patch_stretch = true
+stretch_margin_left = 2
+stretch_margin_top = 2
+stretch_margin_right = 2
+stretch_margin_bottom = 2
+texture_under = SubResource("AtlasTexture_amhku")
+texture_progress = SubResource("AtlasTexture_ufy4d")
+
+[node name="XpText" type="Label" parent="XPBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.0
+offset_top = -5.5
+offset_right = 49.0
+offset_bottom = 5.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "100/100"
+label_settings = SubResource("LabelSettings_amhku")
+horizontal_alignment = 1
+vertical_alignment = 1
