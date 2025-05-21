@@ -9,10 +9,12 @@ var needed_exp: float = 0
 func _init(player: Player) -> void:
 	_player = player
 	calculate_needed_exp()
+	SignalManager.level_up.emit(_player.level)
+
 
 func _level_up() -> void:
 	_player.level += 1
-	SignalManager.update_ui_level_up.emit(_player.level)
+	SignalManager.level_up.emit(_player.level)
 
 
 func gain_exp(amount: float) -> void:

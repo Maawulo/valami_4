@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bjvnb6e4rrx6d"]
+[gd_scene load_steps=4 format=3 uid="uid://bjvnb6e4rrx6d"]
 
 [ext_resource type="PackedScene" uid="uid://csb1i75b3rh3l" path="res://TEST/game_ui_test.tscn" id="1_qreue"]
 [ext_resource type="PackedScene" uid="uid://ia3rn5bybs2m" path="res://entity/player/player_base.tscn" id="2_niss3"]
+[ext_resource type="PackedScene" uid="uid://nh7p765pdp16" path="res://entity/npc/enemy/enemy_test.tscn" id="3_niss3"]
 
 [node name="world_test" type="Node2D"]
 
@@ -10,3 +11,5 @@
 [node name="GameUI" parent="CanvasLayer" instance=ExtResource("1_qreue")]
 
 [node name="player_base" parent="." instance=ExtResource("2_niss3")]
+
+[node name="enemy_test" parent="." instance=ExtResource("3_niss3")]

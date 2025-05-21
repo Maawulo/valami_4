@@ -8,8 +8,8 @@ var stat_manager: StatManager
 var growth_rate: float
 
 func _init(stats: StatManager) -> void:
-	print_debug("Init BaseResource")
 	stat_manager = stats
+	SignalManager.level_up.connect(on_level_up)
 
 var max_resource: float
 var current: float:
@@ -32,6 +32,6 @@ func setup(max_value: float) -> void:
 	max_resource = max_value
 	current = max_resource
 
-func set_max_resource() -> void:
+func on_level_up(_lvl: int) -> void:
 	pass
 	

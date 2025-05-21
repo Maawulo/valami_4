@@ -1,22 +1,11 @@
 class_name StatManager
 extends Resource
 
-@warning_ignore("unused_signal")
-signal on_stat_change
-
-var stamina: float
-var intellect: float
-var strength: float
-var dexterity: float
-
-@export var base_stamina: float
-@export var base_intellect: float
-@export var base_strength: float
-@export var base_dexterity: float
-
-
-func setup() -> void:
-	stamina = base_stamina
-	intellect = base_intellect
-	strength = base_strength
-	dexterity = base_dexterity
+##Increase max health
+@export var stamina: float
+##Increase max mana and magic damage
+@export var intellect: float
+##Increase physical damage
+@export var strength: float
+##Increase ranged damage, and attack speed
+@export var dexterity: float

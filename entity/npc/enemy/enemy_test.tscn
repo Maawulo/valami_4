@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://nh7p765pdp16"]
+
+[ext_resource type="Script" uid="uid://d3h8paqtfqwwa" path="res://entity/npc/enemy/enemy_npc_class.gd" id="1_wnksi"]
+[ext_resource type="Resource" uid="uid://cc0scgdgrt62t" path="res://systems/stats/enemy_test.tres" id="2_y2dpk"]
+
+[node name="enemy_test" type="CharacterBody2D"]
+script = ExtResource("1_wnksi")
+stat_manager = ExtResource("2_y2dpk")
+entity_name = "Test"
+metadata/_custom_type_script = "uid://d3h8paqtfqwwa"

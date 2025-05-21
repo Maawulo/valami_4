@@ -7,7 +7,7 @@ extends Control
 
 func _init() -> void:
 	SignalManager.update_ui_exp.connect(update_xp_bar)
-	SignalManager.update_ui_level_up.connect(update_level)
+	SignalManager.level_up.connect(update_level)
 
 
 func update_xp_bar(current_exp: float, max_exp: float) -> void:
